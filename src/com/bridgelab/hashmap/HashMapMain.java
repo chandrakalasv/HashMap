@@ -2,9 +2,9 @@ package com.bridgelab.hashmap;
 
 public class HashMapMain {
     public static void main(String[] args) {
-        String sentence = "to be or not to be";
         IHashMap<String,Integer> hashMap = new HashMap<>();
-        String[] words = sentence.toLowerCase().split(" ");
+        String paragraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+        String[] words = paragraph.toLowerCase().split(" ");
         for(String word: words) {
             Integer value = hashMap.get(word);
             if(value == null)
@@ -13,8 +13,6 @@ public class HashMapMain {
                 value = value + 1;
             hashMap.put(word, value);
         }
-        int frequency = hashMap.get("to");
-        System.out.println(frequency);
         System.out.println(hashMap);
     }
 }
