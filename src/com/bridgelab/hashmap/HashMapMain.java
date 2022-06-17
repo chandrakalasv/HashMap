@@ -13,6 +13,7 @@ public class HashMapMain {
                 value = value + 1;
             hashMap.put(word, value);
         }
+        hashMap.remove("avoidable");
         System.out.println(hashMap);
     }
 }
